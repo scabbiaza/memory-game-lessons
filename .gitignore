@@ -1,0 +1,11 @@
+/ignore/
+npm-debug.log
+
+.idea
+.DS_Store
+*.iml
+test*.js
+node_modules
+
+/public/
+!/public/index.html
