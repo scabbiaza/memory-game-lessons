@@ -1,6 +1,6 @@
 let R = require("ramda")
 
-let {duplicate, getASCIICodeByLetter, getLetterByASCIICode, shuffle} = require("./helpers/common")
+let {getASCIICodeByLetter, getLetterByASCIICode, shuffle} = require("./helpers/common")
 let {boardCellStatuses, minLetterASCIICode} = require("./constants")
 
 
@@ -15,7 +15,7 @@ function makeRandomBoard(columns, rows) {
   }
 
   let maxLetterASCIICode = minLetterASCIICode + (columns * rows) / 2 - 1 // divide in 2, because each letter should be present twice
-  let letters = R.chain(duplicate, R.map(getLetterByASCIICode, R.range(minLetterASCIICode, maxLetterASCIICode + 1)))
+  let letters = R.chain(R.flip(R.repeat)(2), R.map(getLetterByASCIICode, R.range(minLetterASCIICode, maxLetterASCIICode + 1)))
   let randomLetters = shuffle(letters)
   let cells = R.map(letter => {return {value: letter, status: boardCellStatuses.closed}}, randomLetters)
   return R.map(i => R.slice(columns * i, columns * i + columns, cells), R.range(0, rows))

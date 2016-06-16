@@ -1,13 +1,5 @@
 let R = require("ramda")
 
-// A -> [A, A]
-function duplicate(a) {
-  if (R.type(a) == "Undefined") {
-     throw Error("Argument should be defined")
-  }
-  return [a, a]
-}
-
 // Char -> Number
 function getASCIICodeByLetter(letter) {
   if (R.type(letter) != "String" || R.length(letter) != 1) {
@@ -52,7 +44,6 @@ function shuffle(list) {
 }
 
 
-exports.duplicate = duplicate
 exports.getASCIICodeByLetter = getASCIICodeByLetter
 exports.getLetterByASCIICode = getLetterByASCIICode
 exports.getRandomNumber = getRandomNumber
