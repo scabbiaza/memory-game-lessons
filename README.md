@@ -3,5 +3,5 @@
 
 #### Run tests
 ```
-$ mocha
+$ npm run test
 ```
