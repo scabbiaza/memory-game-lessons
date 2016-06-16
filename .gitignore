@@ -5,6 +5,7 @@ npm-debug.log
 .DS_Store
 *.iml
 test*.js
+!/test/**/*
 node_modules
 
 /public/
