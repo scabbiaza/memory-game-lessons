@@ -1,9 +1,9 @@
 let boardCellStatuses = {
   opened: "opened",
   closed: "closed",
-  cracked: "cracked",
+  done: "done",
 }
-let boardSize = {columns: 3, rows: 4}
+let boardSize = {columns: 4, rows: 3}
 let minLetterASCIICode = 65
 
 
