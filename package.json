@@ -5,7 +5,8 @@
   "author": "YourName",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "webpack-dev-server --content-base public/ --inline --progress"
+    "dev": "webpack-dev-server --content-base public/ --inline --progress",
+    "test": "mocha"
   },
   "dependencies": {
     "chai": "^3.5.0",
